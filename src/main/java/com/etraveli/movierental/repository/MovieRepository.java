@@ -1,9 +1,11 @@
-package com.etraveli.movierental.repositories;
+package com.etraveli.movierental.repository;
 
-import com.etraveli.movierental.models.Movie;
-import com.etraveli.movierental.models.MovieType;
+import com.etraveli.movierental.model.Movie;
+import com.etraveli.movierental.enums.MovieType;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class MovieRepository {
@@ -18,5 +20,9 @@ public class MovieRepository {
 
     public Movie getMovieById(String movieId) {
         return movies.get(movieId);
+    }
+
+    public List<Movie> getAllMovies() {
+        return new ArrayList<>(movies.values());
     }
 }

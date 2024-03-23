@@ -1,8 +1,10 @@
-package com.etraveli.movierental.models;
+package com.etraveli.movierental.model;
+
+import com.etraveli.movierental.enums.MovieType;
 
 public class Movie {
-    private String title;
-    private MovieType type;
+    private final String title;
+    private final MovieType type;
 
     public Movie(String title, MovieType type) {
         this.title = title;
@@ -12,6 +14,7 @@ public class Movie {
     public String getTitle() {
         return title;
     }
+
     public MovieType getType() {
         return type;
     }

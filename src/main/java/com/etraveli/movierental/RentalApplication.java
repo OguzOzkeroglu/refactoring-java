@@ -1,8 +1,8 @@
 package com.etraveli.movierental;
 
-import com.etraveli.movierental.models.Customer;
-import com.etraveli.movierental.models.MovieRental;
-import com.etraveli.movierental.services.RentalService;
+import com.etraveli.movierental.model.Customer;
+import com.etraveli.movierental.model.MovieRental;
+import com.etraveli.movierental.service.RentalService;
 
 import java.util.Arrays;
 import java.util.List;

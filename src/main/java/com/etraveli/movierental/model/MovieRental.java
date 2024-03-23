@@ -1,8 +1,8 @@
-package com.etraveli.movierental.models;
+package com.etraveli.movierental.model;
 
 public class MovieRental {
-    private String movieId;
-    private int days;
+    private final String movieId;
+    private final int days;
 
     public MovieRental(String movieId, int days) {
         this.movieId = movieId;

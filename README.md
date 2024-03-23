@@ -29,6 +29,15 @@
 - Introduced `MovieRepository` to manage movie data, simulating a database layer for better data management.
 - Refactored `RentalService` to use `MovieRepository` for retrieving movie information, enhancing separation of concerns and making the service layer more focused on business logic.
 
+### Step 6:
+- Updated package names to singular form (e.g., `model`, `service`, `repository`) to adhere to common Java conventions.
+- Made fields in model classes (`Customer`, `Movie`, `MovieRental`) final to enhance immutability and thread-safety.
+- Introduced `MovieRepositoryTest` to validate the functionality of the movie data management layer, covering both successful retrievals and handling of non-existent movie IDs.
+- Expanded `RentalServiceTest` with new test cases to cover edge cases, specifically:
+  - Rental periods that border bonus conditions for new releases and additional charge thresholds for regular and children's movies.
+  - Scenarios with customers having no rentals to ensure the service handles these cases gracefully.
+
+
 ## Building and Running the Project:
 Ensure you have Maven installed and configured properly to build and run this project.
 
