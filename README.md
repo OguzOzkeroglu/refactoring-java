@@ -1,4 +1,10 @@
-# Refactoring Java
+# Refactoring Movie Rental Application
+
+## Project Approach and Decisions
+- **Branching Strategy**: This project was developed using a single branch, without the use of pull requests for merging changes. This approach was chosen as I am the sole contributor to the project, simplifying the development process.
+- **Framework and Containerization**: To maintain the project's simplicity and to avoid overengineering, no additional frameworks or containerized support have been incorporated. The goal is to keep the project straightforward and focused on its core functionality.
+
+## Refactoring Steps
 
 ### Step 1:
 - Convert the project to a Maven project for better dependency management.
@@ -19,6 +25,9 @@
   - Extracted the creation of test data into a separate method `createTestCustomer`.
   - Isolated the assertion logic into a method `assertExpectedResult` to simplify the main execution flow.
 
+### Step 5:
+- Introduced `MovieRepository` to manage movie data, simulating a database layer for better data management.
+- Refactored `RentalService` to use `MovieRepository` for retrieving movie information, enhancing separation of concerns and making the service layer more focused on business logic.
 
 ## Building and Running the Project:
 Ensure you have Maven installed and configured properly to build and run this project.

@@ -2,7 +2,7 @@ package com.etraveli.movierental;
 
 import com.etraveli.movierental.models.Customer;
 import com.etraveli.movierental.models.MovieRental;
-import com.etraveli.movierental.services.RentalInfo;
+import com.etraveli.movierental.services.RentalService;
 
 import java.util.Arrays;
 import java.util.List;
@@ -18,7 +18,7 @@ public class RentalApplication {
                 "Amount owed is 5.5\n" +
                 "You earned 2 frequent points\n";
 
-        String result = new RentalInfo().statement(testCustomer);
+        String result = new RentalService().statement(testCustomer);
 
         assertExpectedResult(expected, result);
     }
