@@ -5,18 +5,39 @@ import com.etraveli.movierental.models.MovieRental;
 import com.etraveli.movierental.services.RentalInfo;
 
 import java.util.Arrays;
+import java.util.List;
 
 public class RentalApplication {
 
-  public static void main(String[] args) {
-    String expected = "Rental Record for C. U. Stomer\n\tYou've Got Mail\t3.5\n\tMatrix\t2.0\nAmount owed is 5.5\nYou earned 2 frequent points\n";
+    public static void main(String[] args) {
+        Customer testCustomer = createTestCustomer();
 
-    String result = new RentalInfo().statement(new Customer("C. U. Stomer", Arrays.asList(new MovieRental("F001", 3), new MovieRental("F002", 1))));
+        String expected = "Rental Record for C. U. Stomer\n" +
+                "\tYou've Got Mail\t3.5\n" +
+                "\tMatrix\t2.0\n" +
+                "Amount owed is 5.5\n" +
+                "You earned 2 frequent points\n";
 
-    if (!result.equals(expected)) {
-      throw new AssertionError("Expected: " + System.lineSeparator() + String.format(expected) + System.lineSeparator() + System.lineSeparator() + "Got: " + System.lineSeparator() + result);
+        String result = new RentalInfo().statement(testCustomer);
+
+        assertExpectedResult(expected, result);
     }
 
-    System.out.println("Success");
-  }
+    private static Customer createTestCustomer() {
+        List<MovieRental> rentals = Arrays.asList(
+                new MovieRental("F001", 3),
+                new MovieRental("F002", 1)
+        );
+        return new Customer("C. U. Stomer", rentals);
+    }
+
+    private static void assertExpectedResult(String expected, String result) {
+        if (!result.equals(expected)) {
+            System.err.println("Assertion Failed.");
+            System.err.println("Expected: " + System.lineSeparator() + expected);
+            System.err.println("Got: " + System.lineSeparator() + result);
+        } else {
+            System.out.println("Success");
+        }
+    }
 }
