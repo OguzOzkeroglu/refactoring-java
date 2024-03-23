@@ -1,3 +1,5 @@
+package com.etraveli.movierental.models;
+
 public class MovieRental {
     private String movieId;
     private int days;

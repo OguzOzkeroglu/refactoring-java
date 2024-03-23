@@ -1,3 +1,9 @@
+package com.etraveli.movierental.services;
+
+import com.etraveli.movierental.models.Customer;
+import com.etraveli.movierental.models.Movie;
+import com.etraveli.movierental.models.MovieRental;
+
 import java.util.HashMap;
 
 public class RentalInfo {

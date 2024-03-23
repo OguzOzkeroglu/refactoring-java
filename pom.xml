@@ -48,7 +48,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>Main</mainClass>
+                            <mainClass>com.etraveli.movierental.RentalApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

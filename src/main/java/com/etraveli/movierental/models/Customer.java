@@ -1,3 +1,5 @@
+package com.etraveli.movierental.models;
+
 import java.util.List;
 
 public class Customer {
