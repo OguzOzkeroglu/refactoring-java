@@ -9,18 +9,18 @@ import com.etraveli.movierental.repository.MovieRepository;
 public class RentalService {
     private final MovieRepository movieRepository = new MovieRepository();
 
-    public String statement(Customer customer) {
+    public String createRentalStatement(Customer customer) {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
         StringBuilder result = new StringBuilder("Rental Record for " + customer.getName() + "\n");
 
         for (MovieRental rental : customer.getRentals()) {
             Movie movie = movieRepository.getMovieById(rental.getMovieId());
-            double thisAmount = calculateAmountFor(rental, movie);
+            double rentalCharge = calculateAmountFor(rental, movie);
 
             frequentRenterPoints += calculateFrequentRenterPoints(rental, movie);
-            result.append("\t").append(movie.getTitle()).append("\t").append(thisAmount).append("\n");
-            totalAmount += thisAmount;
+            result.append("\t").append(movie.getTitle()).append("\t").append(rentalCharge).append("\n");
+            totalAmount += rentalCharge;
         }
 
         result.append("Amount owed is ").append(totalAmount).append("\n");

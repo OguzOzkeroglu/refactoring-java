@@ -37,6 +37,8 @@
   - Rental periods that border bonus conditions for new releases and additional charge thresholds for regular and children's movies.
   - Scenarios with customers having no rentals to ensure the service handles these cases gracefully.
 
+### Step 7:
+- Renamed the `statement` method in `RentalService` to `createRentalStatement` for enhanced clarity and readability. This name better reflects the method's purpose of generating a detailed rental statement for customers.
 
 ## Building and Running the Project:
 Ensure you have Maven installed and configured properly to build and run this project.

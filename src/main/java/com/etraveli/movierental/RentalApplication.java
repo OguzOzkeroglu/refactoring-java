@@ -18,7 +18,7 @@ public class RentalApplication {
                 "Amount owed is 5.5\n" +
                 "You earned 2 frequent points\n";
 
-        String result = new RentalService().statement(testCustomer);
+        String result = new RentalService().createRentalStatement(testCustomer);
 
         assertExpectedResult(expected, result);
     }
