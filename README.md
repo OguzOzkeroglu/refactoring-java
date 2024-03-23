@@ -52,3 +52,14 @@ mvn clean package
 ```
 java -jar target\refactoring-java-1.0-SNAPSHOT.jar
 ```
+## Wishes:
+If I had more time to invest to this project, I would like to have these as well:
+- Use a database (probably a relational one) to store the data.
+- Add a framework support (e.g. Spring Boot) to facilitate dependency injection, simplified configuration, using components and implementign RESTful APIs.
+- Add an exception handling mechanism with additional custom exceptions.
+- Add a logging framework support.
+- Implement RESTful APIs.
+- Add Security mechanism.
+- Implement more test cases.
+- Add documentation.
+- Set a up basic CI/CD pipeline.
